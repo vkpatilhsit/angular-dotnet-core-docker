@@ -16,7 +16,14 @@ Clone repo, navigate to root folder and run ` docker-compose -f 'docker-compose.
   docker-compose -f 'docker-compose.yml' up
 ```
 
-**Please note,** I have used Sendgrid, so it will require a sendgrid key to run, as it is sending an email confirmation on register, if you do not need, you can remove that code while registeing (in AccountService Class)
+On Start, This will create below 6 containers. db-migration will exit after running migration.
+
+  1. frontend (Angular)
+  2. api (Dotnet)
+  3. postgres (Database)
+  4. pgadmin (To access Db)
+  5. db-migration (One time migration update)
+  6. nginx (load balancer)
 
 ## Project Folders 
 The apps written in the following JavaScript frameworks/libraries:
@@ -46,7 +53,7 @@ Also, it has sample code for Auth guard, services, http interceptors, resolver a
 
 #### Dotnet (6.0.0)
 
-Rest APis of this project is devloped using dotnet
+In MEAN stack, E stands for Expressjs, all rest services are developed using express js.
 
 It contains sample for:
 
